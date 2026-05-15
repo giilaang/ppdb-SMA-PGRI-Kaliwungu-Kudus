@@ -1248,8 +1248,39 @@ nav {
     padding: 1rem 1rem;
   }
   .glass-card {
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .contact-info-card .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .contact-info-card .section-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .contact-details {
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .contact-text p {
+    font-size: 0.9rem;
+  }
+}
 
+@media screen and (max-width: 380px) {
+  .contact-info-card .section-title {
+    font-size: 1.5rem;
+  }
+  .contact-text p {
+    font-size: 0.85rem;
+  }
+  .contact-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -1984,4 +2015,6 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+
 
