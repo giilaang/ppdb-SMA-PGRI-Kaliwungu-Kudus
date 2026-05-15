@@ -84,7 +84,7 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    padding: 1rem 1rem; /* atas-bawah diperbesar */
+    padding: 0,5rem 0,5rem; /* atas-bawah diperbesar */
   }
 }
 
@@ -121,7 +121,7 @@ nav {
         justify-content: flex-start;
         align-items: center;
         text-align: left;
-        font-size: 15px;
+        font-size: 14px;
         gap: 8px;
         max-width: 80%;
     }
