@@ -3,31 +3,31 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
     public function register(): void
     {
         //
     }
 
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
-        // View composer for frontend layouts and views
+        if (app()->environment('production')) {
+            URL::forceScheme('https');
+        }
+
         view()->composer(['layouts.frontend', 'frontend.*'], function ($view) {
-            $activeYear = \App\Models\AcademicYear::where('is_active', true)->first() 
+            $activeYear = \App\Models\AcademicYear::where('is_active', true)->first()
                 ?? \App\Models\AcademicYear::latest()->first();
 
             $ppdbSetting = null;
             $brochure = null;
+
             if ($activeYear) {
                 $ppdbSetting = \App\Models\PpdbSetting::where('academic_year_id', $activeYear->id)->first();
+
                 $brochure = \App\Models\Brochure::where('academic_year_id', $activeYear->id)
                     ->where('is_active', true)
                     ->first();
