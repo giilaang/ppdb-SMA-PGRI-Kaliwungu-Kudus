@@ -84,7 +84,7 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    padding: 1rem 1rem; /* atas-bawah diperbesar */
+    padding: 0,5rem 0,5rem; /* atas-bawah diperbesar */
   }
 }
 
@@ -107,7 +107,7 @@ nav {
 /* Khusus layar HP */
 @media (max-width: 576px) {
   .logo {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .logo img {
@@ -121,7 +121,7 @@ nav {
         justify-content: flex-start;
         align-items: center;
         text-align: left;
-        font-size: 15px;
+        font-size: 14px;
         gap: 8px;
         max-width: 80%;
     }
@@ -1248,8 +1248,39 @@ nav {
     padding: 1rem 1rem;
   }
   .glass-card {
-    padding: 1rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+  .contact-info-card .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+  .contact-info-card .section-description {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  .contact-details {
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .contact-text p {
+    font-size: 0.9rem;
+  }
+}
 
+@media screen and (max-width: 380px) {
+  .contact-info-card .section-title {
+    font-size: 1.5rem;
+  }
+  .contact-text p {
+    font-size: 0.85rem;
+  }
+  .contact-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -1477,8 +1508,8 @@ footer {
   }
 
   .sidebar-logo-img {
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     border-radius: 6px;
   }
@@ -1512,7 +1543,7 @@ footer {
 
   .sidebar-links {
     list-style: none;
-    padding: 1rem 0;
+    padding: 0.1rem 0;
     flex-grow: 1;
   }
 
@@ -1522,8 +1553,9 @@ footer {
 
   .sidebar-links a {
     display: block;
-    padding: 1.25rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 1rem;
+    padding-left: 35px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-primary);
     text-decoration: none;
@@ -1543,7 +1575,8 @@ footer {
     color: #ffffff !important;
     border-radius: 10px !important;
     margin: 15px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
+    font-size: 13px;
   }
 
   .sidebar-footer {
@@ -1559,6 +1592,23 @@ footer {
     gap: 1.5rem;
     margin-bottom: 1rem;
   }
+
+  .sidebar-socials {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sidebar-socials img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.sidebar-socials img:hover {
+  transform: scale(1.1);
+}
 
   .sidebar-socials a {
     display: flex;
@@ -1861,8 +1911,8 @@ footer {
   top: 0.6rem;
   width: 6px;
   height: 6px;
-  background: var(--gold);
   border-radius: 50%;
+  background: var(--gold);
 }
 
 .modal-notice {
